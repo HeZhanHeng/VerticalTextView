@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.github.paradoxie:AutoVerticalTextview-0.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AutoVerticalTextview-0.1.aar/1e2ce42ad938e110b3b3843918f59cad/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AutoVerticalTextview-0.1.aar/1e2ce42ad938e110b3b3843918f59cad/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AutoVerticalTextview-0.1.aar/862bff59b1b4b3b06590302edd7168a5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AutoVerticalTextview-0.1.aar/862bff59b1b4b3b06590302edd7168a5/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
