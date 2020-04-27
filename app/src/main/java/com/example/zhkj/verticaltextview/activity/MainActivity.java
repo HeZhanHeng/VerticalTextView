@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private ImageView[]ivPointArray;
     private VerticalTextView TextView;
     private MarqueTextView tv_marquee;
-    private Button btn_jump,btn_jump2,btn_jump3,btn_jump4;
+    private Button btn_jump,btn_jump2,btn_jump3,btn_jump4,btn_jump5;
     private TextView tv_handler;
     @SuppressLint("HandlerLeak")
     private Handler handler=new Handler(){
@@ -194,6 +194,8 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         btn_jump3.setOnClickListener(this);
         btn_jump4=(Button)findViewById(R.id.btn_jump4);
         btn_jump4.setOnClickListener(this);
+        btn_jump5=findViewById(R.id.btn_jump5);
+        btn_jump5.setOnClickListener(this);
         level1 = (LinearLayout) findViewById(R.id.level1);
         level1.setOnClickListener(this);
     }
@@ -291,6 +293,10 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
             case R.id.btn_jump4:
                 Intent intent2=new Intent(mActivity,TabActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.btn_jump5:
+                Intent intent3=new Intent(mActivity,GalleryActivity.class);
+                startActivity(intent3);
                 break;
         }
     }
