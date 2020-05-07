@@ -22,7 +22,8 @@
         <activity android:name=".activity.WebActivity" />
         <activity android:name=".activity.ThreeActivity" />
         <activity android:name=".activity.TabActivity" />
-        <activity android:name=".activity.GalleryActivity"></activity>
+        <activity android:name=".activity.GalleryActivity" />
+        <activity android:name=".SunshineActivity"></activity>
     </application>
 
 </manifest>
