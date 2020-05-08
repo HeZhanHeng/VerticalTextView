@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
@@ -134,10 +135,11 @@ public class SunAnimationView extends View
     private void drawSemicircle(Canvas canvas)
     {
         mRectF = new RectF(mWidth / 2 - mRadius, marginTop, mWidth / 2 + mRadius, mRadius * 2 + marginTop);
-        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setStyle(Paint.Style.STROKE);//描边
         mPaint.setDither(true);//防止抖动
         mPaint.setColor(mCircleColor);
-        canvas.drawArc(mRectF, 180, 180, true, mPaint);
+        mPaint.setPathEffect(new DashPathEffect(new float[] {5, 5}, 0));//虚线
+        canvas.drawArc(mRectF, 180, 180, false, mPaint);//是否含圆心
     }
 
     /**
