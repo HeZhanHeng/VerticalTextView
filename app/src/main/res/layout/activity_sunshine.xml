@@ -19,6 +19,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="设置时间"/>
+    <TextView
+        android:id="@+id/tv_marquee"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text=""
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ads">
+    </TextView>
             <com.example.zhkj.verticaltextview.view.SelfView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

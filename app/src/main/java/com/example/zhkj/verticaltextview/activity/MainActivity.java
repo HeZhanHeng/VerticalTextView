@@ -23,7 +23,6 @@ import android.widget.Toast;
 
 import com.example.zhkj.verticaltextview.R;
 import com.example.zhkj.verticaltextview.SunshineActivity;
-import com.example.zhkj.verticaltextview.view.MarqueTextView;
 import com.example.zhkj.verticaltextview.view.VerticalTextView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private ImageView iv_point;
     private ImageView[]ivPointArray;
     private VerticalTextView TextView;
-    private MarqueTextView tv_marquee;
     private Button btn_jump,btn_jump2,btn_jump3,btn_jump4,btn_jump5,btn_jump6;
     private TextView tv_handler;
     @SuppressLint("HandlerLeak")
@@ -182,10 +180,6 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 Toast.makeText(MainActivity.this, "点击了：" + titleList.get(position), Toast.LENGTH_SHORT).show();
             }
         });
-//        横向滚动的广告
-        tv_marquee=(MarqueTextView)findViewById(R.id.tv_marquee);
-        tv_marquee.setText("此段代码由河南省郑州市管城区国际陆港开发建设有限公司之中浩科技有限公司综合业务部一分部和战恒编写");
-        tv_marquee.setSelected(true);
         btn_jump=(Button)findViewById(R.id.btn_jump);
         tv_handler=(TextView)findViewById(R.id.tv_handler);
         btn_jump2=(Button)findViewById(R.id.btn_jump2);

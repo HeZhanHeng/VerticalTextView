@@ -43,22 +43,13 @@
         android:background="#ffff"
         />
 </LinearLayout>
-        <com.example.zhkj.verticaltextview.view.MarqueTextView
-            android:id="@+id/tv_marquee"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:ellipsize="marquee"
-            android:singleLine="true"
-            android:layout_height="45dp"
-            android:layout_below="@+id/ads">
-        </com.example.zhkj.verticaltextview.view.MarqueTextView>
+
         <Button
             android:id="@+id/btn_jump"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="跳转到网页"
-            android:layout_below="@+id/tv_marquee"/>
+            android:layout_below="@+id/ads"/>
         <Button
             android:id="@+id/btn_jump2"
             android:layout_width="wrap_content"
@@ -106,6 +97,13 @@
     android:layout_alignParentBottom="true"
     android:layout_width="match_parent"
     android:layout_height="45dp">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="滑动删除列表"
+        android:textColor="@color/colorPrimaryDark" />
 </LinearLayout>
 </RelativeLayout>
