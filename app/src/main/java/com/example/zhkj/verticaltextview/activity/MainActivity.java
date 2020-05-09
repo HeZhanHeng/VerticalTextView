@@ -11,7 +11,6 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,18 +21,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.zhkj.verticaltextview.R;
-import com.example.zhkj.verticaltextview.SunshineActivity;
 import com.example.zhkj.verticaltextview.view.VerticalTextView;
 
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.IOException;
-import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.xmlpull.v1.XmlPullParser.*;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
     private Activity mActivity;
@@ -46,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private ImageView iv_point;
     private ImageView[]ivPointArray;
     private VerticalTextView TextView;
-    private Button btn_jump,btn_jump2,btn_jump3,btn_jump4,btn_jump5,btn_jump6;
+    private Button btn_jump,btn_jump2,btn_jump3,btn_jump4,btn_jump5,btn_jump6,btn_jump7;
     private TextView tv_handler;
     @SuppressLint("HandlerLeak")
     private Handler handler=new Handler(){
@@ -193,6 +184,8 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         btn_jump5.setOnClickListener(this);
         btn_jump6=findViewById(R.id.btn_jump6);
         btn_jump6.setOnClickListener(this);
+        btn_jump7=findViewById(R.id.btn_jump7);
+        btn_jump7.setOnClickListener(this);
         level1 = (LinearLayout) findViewById(R.id.level1);
         level1.setOnClickListener(this);
     }
@@ -298,6 +291,10 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
             case R.id.btn_jump6:
                 Intent intent4=new Intent(mActivity,SunshineActivity.class);
                 startActivity(intent4);
+                break;
+            case R.id.btn_jump7:
+                Intent intent5=new Intent(mActivity,AnimationActivity.class);
+                startActivity(intent5);
                 break;
         }
     }

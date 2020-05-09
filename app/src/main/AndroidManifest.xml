@@ -23,7 +23,8 @@
         <activity android:name=".activity.ThreeActivity" />
         <activity android:name=".activity.TabActivity" />
         <activity android:name=".activity.GalleryActivity" />
-        <activity android:name=".SunshineActivity"></activity>
+        <activity android:name=".activity.SunshineActivity" />
+        <activity android:name=".activity.AnimationActivity"></activity>
     </application>
 
 </manifest>

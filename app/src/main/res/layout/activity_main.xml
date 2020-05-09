@@ -90,6 +90,12 @@
             android:layout_height="wrap_content"
             android:text="日出日落"
             android:layout_below="@+id/btn_jump5"/>
+        <Button
+            android:id="@+id/btn_jump7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属性动画"
+            android:layout_below="@+id/btn_jump6"/>
     </RelativeLayout>
 <LinearLayout
     android:id="@+id/level1"
