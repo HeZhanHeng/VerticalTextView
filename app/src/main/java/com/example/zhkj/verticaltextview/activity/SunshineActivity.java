@@ -4,13 +4,16 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.zhkj.verticaltextview.R;
 import com.example.zhkj.verticaltextview.view.CircleProgressView;
+import com.example.zhkj.verticaltextview.view.CustomPopWindow;
 import com.example.zhkj.verticaltextview.view.SunAnimationView;
 import com.example.zhkj.verticaltextview.view.TipsDialog;
 
@@ -18,7 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SunshineActivity extends AppCompatActivity {
-    Button button;
+    Button button,btn_pop;
     private TextView tv_marquee;
     SunAnimationView sumView;
     private String mCurrentTime;
@@ -64,6 +67,28 @@ public class SunshineActivity extends AppCompatActivity {
                 });
             }
         });
+        btn_pop=findViewById(R.id.btn_pop);
+        btn_pop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final CustomPopWindow customPopWindow=new CustomPopWindow(SunshineActivity.this);
+                customPopWindow.showAtLocation(v,
+                        Gravity.CENTER , 0, 0);
+                customPopWindow.setTitle("hello 123");
+                customPopWindow.isShowing();
+//                可以在自定义pop里暴露一个接口给外部使用，也可在pop内部进行操作
+//                customPopWindow.setOnItemClickListener(new CustomPopWindow.OnItemClickListener() {
+//                    @Override
+//                    public void click(View popupWindow, boolean confirm) {
+//                        if (confirm){
+//                            customPopWindow.dismiss();
+//                            customPopWindow.backgroundAlpha(SunshineActivity.this,1f);
+//                        }
+//                    }
+//                });
+            }
+        });
+
         //        横向滚动的广告
         tv_marquee=(TextView) findViewById(R.id.tv_marquee);
         tv_marquee.setText("此段代码由河南省郑州市管城区国际陆港开发建设有限公司之中浩科技有限公司综合业务部一分部和战恒编写");

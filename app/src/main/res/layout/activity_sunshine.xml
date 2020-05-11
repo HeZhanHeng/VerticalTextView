@@ -26,6 +26,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="设置时间"/>
+            <Button
+                android:id="@+id/btn_pop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义pop"/>
             <TextView
                 android:id="@+id/tv_marquee"
                 android:layout_width="match_parent"
