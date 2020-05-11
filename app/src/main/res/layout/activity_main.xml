@@ -23,26 +23,27 @@
         android:orientation="horizontal"
         android:gravity="center">
     </LinearLayout>
-<LinearLayout
-    android:id="@+id/ads"
-    android:layout_below="@+id/guide_ll_point"
-    android:orientation="horizontal"
-    android:background="#FFFFFF"
-    android:layout_width="match_parent"
-    android:layout_height="20dp">
-    <ImageView
-        android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:src="@drawable/guangbo"/>
-    <com.example.zhkj.verticaltextview.view.VerticalTextView
-        android:id="@+id/mTv"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffff"
-        />
-</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ads"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/guide_ll_point"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/guangbo" />
+
+            <com.example.zhkj.verticaltextview.view.VerticalTextView
+                android:id="@+id/mTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#ffff" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_jump"
