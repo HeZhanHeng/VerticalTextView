@@ -24,7 +24,8 @@
         <activity android:name=".activity.TabActivity" />
         <activity android:name=".activity.GalleryActivity" />
         <activity android:name=".activity.SunshineActivity" />
-        <activity android:name=".activity.AnimationActivity"></activity>
+        <activity android:name=".activity.AnimationActivity" />
+        <activity android:name=".activity.FrameActivity"></activity>
     </application>
 
 </manifest>
