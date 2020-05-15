@@ -13,6 +13,13 @@ import com.example.zhkj.verticaltextview.R;
 import com.example.zhkj.verticaltextview.fragment.TestFragment;
 import com.example.zhkj.verticaltextview.fragment.TestTwoFragment;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class FrameActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView tv_classify_one, tv_classify_two;
     private boolean checked;//默认值是false
@@ -49,6 +56,16 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.tv_classify_one:
                 if (checked){
+                    Map<String,String>map=new HashMap<>();
+                    JSONObject jsonObject=new JSONObject();
+                    try {
+                        jsonObject.put("name","飞侠恒");
+                        jsonObject.put("age","25");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    map.put("data",jsonObject.toString());
+                    Log.e("map封装成json对象的数据=", map+"" );//{data={"name":"飞侠恒","age":"25"}}
                     tv_classify_one.setTextColor(getResources().getColor(R.color.colorAccent));
                     tv_classify_two.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                     checked=!checked;
@@ -61,6 +78,26 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_classify_two:
                 if (!checked){
+                    Map<String,String>map=new HashMap<>();
+                    JSONArray jsonArray=new JSONArray();
+                    JSONObject jsonObject=new JSONObject();
+                    try {
+                        jsonObject.put("name","飞侠恒");
+                        jsonObject.put("age","25");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    JSONObject jsonObject2=new JSONObject();
+                    try {
+                        jsonObject2.put("name","飞侠恒");
+                        jsonObject2.put("age","26");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    jsonArray.put(jsonObject);
+                    jsonArray.put(jsonObject2);
+                    map.put("data", String.valueOf(jsonArray));
+                    Log.e("map封装成json数组的数据=", map+"" );
                     tv_classify_one.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                     tv_classify_two.setTextColor(getResources().getColor(R.color.colorAccent));
                     checked=!checked;
