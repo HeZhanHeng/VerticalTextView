@@ -72,7 +72,7 @@ public class TestFragment extends Fragment {
         adapter.setOnTvClickListener(new ListViewAdapter.OnTvClickListener() {
            @Override
            public void onClick(int pos) {
-
+                 Toast.makeText(getActivity(),pos+"",Toast.LENGTH_SHORT).show();
            }
        });
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {

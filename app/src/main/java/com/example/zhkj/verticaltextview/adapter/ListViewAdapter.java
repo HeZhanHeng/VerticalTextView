@@ -59,10 +59,11 @@ public class ListViewAdapter extends BaseAdapter {
         }
         holder.tv_item_desc=convertView.findViewById(R.id.tv_item_desc);
         holder.tv_item_desc.setText(list.get(position).toString());
+        holder.tv_item_desc.setTag(position);
         holder.tv_item_desc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onTvClickListener.onClick((int)v.getTag());
+                onTvClickListener.onClick((Integer) v.getTag());
             }
         });
         return convertView;
